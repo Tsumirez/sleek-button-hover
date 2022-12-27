@@ -15,7 +15,7 @@ button {
     border: 0px none;
     background: #fff;
     text-align: right;
-    margin-top: 7rem;
+    margin-top: 4rem;
     font: 2rem Urbanist, sans-serif;
     position: relative;
     padding-right: 1rem;
@@ -69,7 +69,7 @@ button {
 }
 /* Second button */
 
-#two::before {
+.two::before {
     content: "";
     top:calc(100% + .5rem);
     left: -15%;  
@@ -82,7 +82,7 @@ button {
                 .5s left cubic-bezier(.53,.1,.43,1.52);
 }
 
-#two::after {
+.two::after {
     content: "";
     top:-1.5rem;
     left: calc(100% + .5rem + 1px);  
@@ -91,16 +91,16 @@ button {
     width:1px;
     height: 0;
     position: absolute;
-    transition: .5s height cubic-bezier(.53,.1,.43,1.52),
-                .5s top cubic-bezier(.53,.1,.43,1.52);
+    transition: .5s height cubic-bezier(.53,.1,.43,2.52),
+                .5s top cubic-bezier(.53,.1,.43,2.52);
 }
 
-#two:hover::before {
+.two:hover::before {
     width: 120%;
     left:15%;
 }
 
-#two:hover::after {
-    height: 5rem;
+.two:hover::after {
+    height: 7rem;
     top: 1rem;
 }
