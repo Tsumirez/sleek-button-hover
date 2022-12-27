@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 3rem;
+    text-align: center;
+}
+
+button {
+    width: 15rem;
+    height: 3rem;
+    border: 0px none;
+    background: #fff;
+    text-align: right;
+    margin-top: 7rem;
+    font: 2rem Urbanist, sans-serif;
+    position: relative;
+    padding-right: 1rem;
+    border: 1px solid black;
+    border-width: 0 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    left:50%;
+    /* appearance: none; */
+}
+
+#one::before,
+#one::after {
+    content: '';
+    border: 0px none;
+    position: absolute;
+    transition: 0.4s ease-in;
+}
+
+#one::before {
+    left: calc(100% + 7px);
+    bottom: -.5rem;
+    height: 0;
+    width: 0;
+    /* transform: rotateY(180deg); */
+}
+
+#one::after {
+    left: calc(100% + .5rem);
+    bottom: -.5rem;
+    height: 0;
+    width: 0;
+    transform-origin: left;
+    transform: rotateY(.5turn);
+
+}
+
+#one:hover::after {
+    width: 120%;
+    height: calc(100% + 2rem);
+    border:1px solid black;
+    border-width: 0 0 1px 1px;
+}
+
+#one:hover::before {
+    height: 1rem;
+    width: 2rem;
+    bottom:-1.5rem;
+    border:1px solid black;
+    border-width: 1px 0 0 1px;
+}
+/* Second button */
+
+#two::before {
+    content: "";
+    top:calc(100% + .5rem);
+    left: -15%;  
+    border:1px solid black;
+    width:0;
+    height: 1px;
+    position: absolute;
+    border-width: 0 0 1px 0;
+    transition: .5s width cubic-bezier(.53,.1,.43,1.52),
+                .5s left cubic-bezier(.53,.1,.43,1.52);
+}
+
+#two::after {
+    content: "";
+    top:-1.5rem;
+    left: calc(100% + .5rem + 1px);  
+    border:1px solid black;
+    border-width: 0 0 0 1px;
+    width:1px;
+    height: 0;
+    position: absolute;
+    transition: .5s height cubic-bezier(.53,.1,.43,1.52),
+                .5s top cubic-bezier(.53,.1,.43,1.52);
+}
+
+#two:hover::before {
+    width: 120%;
+    left:15%;
+}
+
+#two:hover::after {
+    height: 5rem;
+    top: 1rem;
+}
